@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Course Registration System - Course Search</title>
+		<style>
+			body {
+				margin: 0;
+				font-family: Calibri, sans-serif;
+				background-color: #ffffff;
+				color: #333;
+			}
+			header {
+				background-color: #800080;
+				padding: 1rem;
+				color: #fff;
+			}
+			header h1 {
+				margin: 0;
+				font-size: 1.8rem;
+				text-align: center;
+			}
+			.nav-container {
+				background-color: #993299;
+				padding: 0.5rem;
+				text-align: center;
+			}
+			.nav-container a {
+				color: #fff;
+				text-decoration: none;
+				margin: 0 0.5rem;
+				padding: 0.5rem 1rem;
+				background-color: #aa66aa;
+				border-radius: 4px;
+				transition: background-color 0.3s;
+			}
+			.nav-container a:hover {
+				background-color: #993299;
+			}
+			main {
+				padding: 2rem;
+				max-width: 800px;
+				margin: 0 auto;
+			}
+			form {
+				background-color: #fff;
+				padding: 1.5rem;
+				border-radius: 6px;
+				border: 1px solid #ddd;
+				box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+				margin-bottom: 2rem;
+			}
+			form label {
+				display: block;
+				margin-bottom: 0.5rem;
+				font-weight: bold;
+			}
+			form input[type="text"],
+			form select {
+				width: 100%;
+				padding: 0.5rem;
+				margin-bottom: 1rem;
+				border: 1px solid #ccc;
+				border-radius: 4px;
+			}
+			form button {
+				background-color: #800080;
+				color: #fff;
+				border: none;
+				padding: 0.75rem 1.5rem;
+				border-radius: 4px;
+				cursor: pointer;
+				font-size: 1rem;
+			}
+			form button:hover {
+				background-color: #660066;
+			}
+			.results {
+				background-color: #fff;
+				padding: 1.5rem;
+				border-radius: 6px;
+				border: 1px solid #ddd;
+				box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+			}
+			.course-item {
+				border-bottom: 1px solid #eee;
+				padding: 1rem 0;
+			}
+			.course-item:last-child {
+				border-bottom: none;
+			}
+			.course-item h3 {
+				margin: 0 0 0.5rem 0;
+			}
+			.course-details p {
+				margin: 0.25rem 0;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Course Search</h1>
+		</header>
+		
+		<!--Navigation bar-->
+		<div class="nav-container">
+			<a href="homepage.html">Home</a>
+			<a href="coursesearch.html">Course Search</a>
+			<a href="studentregistration.html">Student Registration</a>
+			<a href="instructorschedule.html">Instructor Schedules</a>
+			<a href="sessionenrollment.html">Session Enrollment</a>
+		</div>
+		
+		<!--Form to pick from department, instructor, and course number-->
+		<main>
+			<form id="courseSearchForm">
+				<label for="department">Department:</label>
+				<select id="department" name="department">
+					<option value="">Select Department</option>
+					<option value="INFO">Information Systems</option>
+					<option value="BUSN">Business</option>
+					<option value="MGMT">Management</option>
+					<option value="SCMA">Supply Chain Management and Analytics</option>
+				</select>
+
+				<label for="instructor">Instructor:</label>
+				<input type="text" id="instructor" name="instructor" placeholder="Enter instructor name">
+
+				<label for="courseNumber">Course Number:</label>
+				<input type="text" id="courseNumber" name="courseNumber" placeholder="Example: 201">
+
+				<button type="submit">Search Courses</button>
+			</form>
+
+			<!--An example of a search result for the page-->
+			<div class="results" id="searchResults">
+				<h2>Search Results</h2>
+				<div class="course-item">
+					<h3>Projects In Information Systems</h3>
+					<div class="course-details">
+						<p><strong>Credit Hours:</strong> 3</p>
+						<p><strong>Details:</strong> INFO 465, 001</p>
+						<p><strong>Prerequisites:</strong> INFO 350, 364, 370</p>
+						<p><strong>Schedule Type:</strong> In-Person</p>
+						<p><strong>Enrollment Maximum:</strong> 40</p>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Course Registration System - Home</title>
+		<style>
+			body {
+				margin: 0;
+				font-family: Calibri, sans-serif;
+				background-color: #ffffff;
+				color: #333;
+			}
+			header {
+				background-color: #800080;
+				padding: 1rem;
+				color: #fff;
+			}
+			header h1 {
+				margin: 0;
+				font-size: 1.8rem;
+				text-align: center;
+			}
+			.nav-container {
+				background-color: #993299;
+				padding: 0.5rem;
+				text-align: center;
+			}
+			.nav-container a {
+				color: #fff;
+				text-decoration: none;
+				margin: 0 0.5rem;
+				padding: 0.5rem 1rem;
+				background-color: #aa66aa;
+				border-radius: 4px;
+				transition: background-color 0.3s;
+			}
+			.nav-container a:hover {
+				background-color: #993299;
+			}
+			main {
+				padding: 2rem;
+				max-width: 800px;
+				margin: 0 auto;
+			}
+			.option-card {
+				background-color: #fff;
+				border: 1px solid #ddd;
+				border-radius: 6px;
+				padding: 1.5rem;
+				margin-bottom: 1rem;
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+				transition: transform 0.2s;
+			}
+			.option-card:hover {
+				transform: scale(1.02);
+			}
+			.option-card h2 {
+				margin-top: 0;
+			}
+			.option-card a {
+				display: inline-block;
+				margin-top: 1rem;
+				text-decoration: none;
+				color: #800080;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>University Course Registration</h1>
+		</header>
+		
+		<!--Navigation bar-->
+		<div class="nav-container">
+			<a href="homepage.html">Home</a>
+			<a href="coursesearch.html">Course Search</a>
+			<a href="studentregistration.html">Student Registration</a>
+			<a href="instructorschedule.html">Instructor Schedules</a>
+			<a href="sessionenrollment.html">Session Enrollment</a>
+		</div>
+		
+		<!--Cards to select which page you want to go-->
+		<main>
+			<section class="option-card">
+				<h2>Course Search</h2>
+				<p>Find the course you need by department, instructor, and course number.</p>
+				<a href="coursesearch.html">Go to Course Search</a>
+			</section>
+			
+			<section class="option-card">
+				<h2>Student Registration</h2>
+				<p>View enrolled sessions and register for new sessions.</p>
+				<a href="studentregistration.html">Go to Student Registration</a>
+			</section>
+			
+			<section class="option-card">
+				<h2>Instructor Schedules</h2>
+				<p>Faculty members only: access your schedules and view assigned sessions.</p>
+				<a href="instructorschedule.html">Go to Instructor Schedules</a>
+			</section>
+			
+			<section class="option-card">
+				<h2>Session Enrollment</h2>
+				<p>List of students enrolled in a particular session.</p>
+				<a href="sessionenrollment.html">Go to Session Enrollment</a>
+			</section>
+		</main>
+	</body>
+</html>
