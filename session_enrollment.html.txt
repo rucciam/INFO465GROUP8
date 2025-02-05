@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Enrollment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Session Enrollment</h2>
+        <label for="session">Select Session:</label>
+        <select id="session">
+            <option value="session1">Session 1 - Web Development</option>
+            <option value="session2">Session 2 - Data Science</option>
+            <option value="session3">Session 3 - UI/UX Design</option>
+        </select>
+        
+        <table>
+            <tr>
+                <th>Student Name</th>
+                <th>Student ID</th>
+                <th>Course Name</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td>John Doe</td>
+                <td>123456</td>
+                <td>Web Development</td>
+                <td>Enrolled</td>
+            </tr>
+            <tr>
+                <td>Jane Smith</td>
+                <td>654321</td>
+                <td>Data Science</td>
+                <td>Waitlisted</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
