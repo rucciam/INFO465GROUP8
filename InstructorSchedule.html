@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Instructor Schedules</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Calibri, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+        }
+        header {
+            background-color: #800080;
+            padding: 1rem;
+            color: #fff;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+        .nav-container {
+            background-color: #993299;
+            padding: 0.5rem;
+            text-align: center;
+        }
+        .nav-container a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 0.5rem;
+            padding: 0.5rem 1rem;
+            background-color: #aa66aa;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .nav-container a:hover {
+            background-color: #993299;
+        }
+        main {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .login-form {
+            background-color: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .login-form input {
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .login-form button {
+            padding: 0.5rem 1rem;
+            background-color: #800080;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .login-form button:hover {
+            background-color: #993299;
+        }
+        .schedule {
+            display: none;
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .schedule ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .schedule li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Instructor Schedules</h1>
+</header>
+
+<!-- Navigation bar -->
+<div class="nav-container">
+    <a href="homepage.html">Home</a>
+    <a href="coursesearch.html">Course Search</a>
+    <a href="studentregistration.html">Student Registration</a>
+    <a href="instructorschedule.html">Instructor Schedules</a>
+    <a href="sessionenrollment.html">Session Enrollment</a>
+</div>
+
+<main>
+    <!-- Login Form -->
+    <div class="login-form">
+        <h2>Login to View Your Schedule</h2>
+        <input type="text" id="username" placeholder="Enter Username" required>
+        <input type="password" id="password" placeholder="Enter Password" required>
+        <button onclick="login()">Login</button>
+    </div>
+
+    <!-- Schedule Display (hidden until login) -->
+    <div class="schedule" id="schedule">
+        <h3>Your Schedule</h3>
+        <ul id="course-list"></ul>
+    </div>
+</main>
+
+<script>
+    // Example credentials for demo purposes
+    const instructors = {
+        "john": {
+            password: "password123",
+            courses: ["Math 101 - Monday at 9:00 AM", "Physics 201 - Wednesday at 10:00 AM"]
+        },
+        "jane": {
+            password: "password456",
+            courses: ["History 202 - Tuesday at 1:00 PM", "Geography 301 - Thursday at 2:00 PM"]
+        }
+    };
+
+    function login() {
+        const username = document.getElementById("username").value.toLowerCase();
+        const password = document.getElementById("password").value;
+
+        // Check if the username exists and password is correct
+        if (instructors[username] && instructors[username].password === password) {
+            // Show the instructor's schedule
+            document.getElementById("schedule").style.display = "block";
+            const courseList = document.getElementById("course-list");
+            courseList.innerHTML = ""; // Clear any previous courses
+            instructors[username].courses.forEach(course => {
+                const listItem = document.createElement("li");
+                listItem.textContent = course;
+                courseList.appendChild(listItem);
+            });
+
+            // Hide the login form
+            document.querySelector(".login-form").style.display = "none";
+        } else {
+            alert("Invalid username or password. Please try again.");
+        }
+    }
+</script>
+
+</body>
+</html>
