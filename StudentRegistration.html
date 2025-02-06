@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Student Login</h2>
+        <form id="login-form">
+            <input type="text" id="student-id" placeholder="Student ID" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <div id="registration-section" style="display:none;">
+            <h2>Enrolled Sessions</h2>
+            <ul id="enrolled-sessions"></ul>
+
+            <h2>Register for a New Session</h2>
+            <select id="available-sessions">
+                <option value="">Select a session</option>
+                <option value="Math 101">Math 101</option>
+                <option value="History 202">History 202</option>
+            </select>
+            <button id="register-btn">Register</button>
+
+            <p id="error-message" style="color:red;"></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.getElementById("registration-section").style.display = "block";
+        });
+
+        let enrolledSessions = [];
+
+        document.getElementById("register-btn").addEventListener("click", function() {
+            let selectedSession = document.getElementById("available-sessions").value;
+            let errorMessage = document.getElementById("error-message");
+
+            if (!selectedSession) {
+                errorMessage.textContent = "Please select a session.";
+                return;
+            }
+
+            if (enrolledSessions.includes(selectedSession)) {
+                errorMessage.textContent = "You are already enrolled in this session.";
+                return;
+            }
+
+            if (enrolledSessions.length >= 5) {
+                errorMessage.textContent = "You cannot enroll in more than 5 sessions.";
+                return;
+            }
+
+            enrolledSessions.push(selectedSession);
+            let sessionList = document.getElementById("enrolled-sessions");
+            let listItem = document.createElement("li");
+            listItem.textContent = selectedSession;
+            sessionList.appendChild(listItem);
+            errorMessage.textContent = "";
+        });
+    </script>
+</body>
+</html>
