@@ -9,3 +9,11 @@ User Stories:
 3) As a school administrator, I want to create, update, and deactivate user accounts,
     so that I can maintain an accurate database of enrolled students and faculty. 
     Priority: High Justification: Required for maintaining up to date information on students and faculty. (Adam)
+
+This product backlog was worked on by all team members:
+
+Signed:
+        Adam Rucci
+        Logan Hartman
+        Emmanuel Afriyie
+        Long Thai
