@@ -18,9 +18,12 @@ User Stories:
 6) As a student, I want to see prerequisites and seat availability in the course search,
    so that I can enroll in the classes that aren't full.
     Priority: High Justification: Without this a student could enroll in a full class. (Logan)
-
-This product backlog was worked on by all team members:
-
+7) As an instructor, I want to view and manage the list of students enrolled in my courses, so that I can track attendance and academic performance.
+    Priority: Medium
+    Justification: This feature is essential for efficient course administration but does not directly impact course availability or registration.
+    This product backlog was worked on by all team members:
+8) As a student, I want to be automatically added to a waitlist when a course is full, so that I have a chance to enroll if a spot opens.
+    Priority: High Justification: Without this feature, students would have to manually check for openings, causing frustration and inefficiency in the enrollment process.
 Signed:
         Adam Rucci
         Logan Hartman
